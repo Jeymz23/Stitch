@@ -2,101 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>James Andrew Abordo</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header>
-    <div class="container">
-      <!-- Typing effect title with image -->
-      <img src="44e8aa2d-3983-4cc6-b5a8-badc7324c55b.jpg" alt="James Andrew Abordo" class="profile-pic" />
-      <h1 class="typewriter">
-        <span id="type-text"></span><span class="cursor">|</span>
-      </h1>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="home" class="hero">
-    <div class="container">
-      <h2>Welcome to My Portfolio</h2>
-    </div>
-  </section>
+  <main>
 
-  <section id="about" class="cards container">
-    <div class="card">
-      <h3>About Me</h3>
-      <p>I’m a joyful journeyer passionate about clean design, creative code, and warm aesthetics.</p>
-    </div>
-  </section>
+    <section id="home" class="section">
+      <h1>Welcome to My Website</h1>
+      <img src="image/profile.jpg" alt="James Andrew Abordo" class="profile-pic" />
+      <p>Hello! I’m James Andrew Abordo, an aspiring IT student passionate about technology and software development.</p>
+    </section>
 
-  <section id="resume" class="cards container">
-    <div class="card">
-      <h3>Resume</h3>
-      <p>Here you'll find my education, experience, and skills that make me peach-perfect for your project.</p>
-    </div>
-  </section>
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>Hello! I’m James Andrew Abordo, an aspiring IT student passionate about technology and software development. I enjoy learning new programming languages and solving real-world problems through code.</p>
+      <p>I am currently studying Information Technology at [Your School], where I focus on web development and system analysis. I love exploring new tools and frameworks to improve my skills.</p>
+      <p>Aside from coding, I enjoy playing basketball, listening to music, and spending time with friends and family. My goal is to become a professional software developer and contribute to innovative projects that make a difference.</p>
+      <p class="motto"><em>Motto in life:</em> <strong>"When the time is right, He is Lord will make it happen."</strong></p>
+    </section>
 
-  <section id="contact" class="cards container">
-    <div class="card">
-      <h3>Contact</h3>
-      <p>Send me a message or connect on social media. I’d love to hear from you!</p>
-    </div>
-  </section>
+    <section id="resume" class="section">
+      <h2>Resume</h2>
+
+      <h3>Education</h3>
+      <p><strong>Bachelor of Science in Information Technology</strong><br />
+      [Your School Name] — Expected Graduation: 2026</p>
+
+      <h3>Skills</h3>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Python, Java</li>
+        <li>Git and GitHub</li>
+        <li>Basic Networking and Database Management</li>
+      </ul>
+
+      <h3>Projects</h3>
+      <ul>
+        <li>Personal Portfolio Website — Built using HTML, CSS, and JavaScript.</li>
+        <li>Library Management System — Created a basic system for book tracking using Python.</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>You can reach me at:</p>
+      <ul>
+        <li>Email: jamesandrew@example.com</li>
+        <li>Phone: +63 912 345 6789</li>
+        <li>GitHub: <a href="https://github.com/jamesandrew" target="_blank">github.com/jamesandrew</a></li>
+      </ul>
+    </section>
+
+  </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 James Andrew Abordo. All rights reserved.</p>
-    </div>
+    <p>© 2025 James Andrew Abordo. All rights reserved.</p>
   </footer>
-
-  <!-- JavaScript for typing effect -->
-  <script>
-    const textElement = document.getElementById("type-text");
-    const phrases = ["James Andrew Abordo", "Web Developer", "Creative Coder", "Joyful Journeyer"];
-    const typingSpeed = 100;
-    const erasingSpeed = 60;
-    const delayBetweenPhrases = 1500;
-
-    let phraseIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function type() {
-      const currentPhrase = phrases[phraseIndex];
-      if (!isDeleting) {
-        textElement.textContent = currentPhrase.substring(0, charIndex + 1);
-        charIndex++;
-        if (charIndex === currentPhrase.length) {
-          isDeleting = true;
-          setTimeout(type, delayBetweenPhrases);
-        } else {
-          setTimeout(type, typingSpeed);
-        }
-      } else {
-        textElement.textContent = currentPhrase.substring(0, charIndex - 1);
-        charIndex--;
-        if (charIndex === 0) {
-          isDeleting = false;
-          phraseIndex = (phraseIndex + 1) % phrases.length;
-          setTimeout(type, typingSpeed);
-        } else {
-          setTimeout(type, erasingSpeed);
-        }
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      setTimeout(type, 1000);
-    });
-  </script>
 
 </body>
 </html>
