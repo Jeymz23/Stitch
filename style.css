@@ -7,6 +7,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* For fixed nav spacing if needed */
 }
 
 body {
@@ -14,6 +15,38 @@ body {
   background-color: #fff6f0;
   color: #4e2a24;
   line-height: 1.6;
+  padding-left: 160px; /* Leave space for fixed left-side nav */
+}
+
+/* Fixed Left-side Navigation */
+nav {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #ffe0cc;
+  padding: 20px 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+nav a {
+  color: #d26a5c;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  background-color: #ffd1b3;
+  color: #fff;
 }
 
 /* Container */
@@ -42,44 +75,14 @@ header {
   display: block;
 }
 
-/* Navigation - fixed on left side */
-nav {
-  position: fixed;
-  top: 50%;
-  left: 20px; /* Changed from right to left */
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-
-nav a {
-  text-decoration: none;
-  color: #d26a5c;
-  font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 8px;
-  text-align: center;
-  background-color: #f0f0f0;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  display: block;
-}
-
-nav a:hover {
-  background-color: #d26a5c;
-  color: white;
-}
-
-
-/* Hero Section */
+/* Hero Section (Home) */
 .hero {
   background: linear-gradient(135deg, #ffe6d4, #ffd9c0);
-  padding: 60px 0;
+  height: 100vh; /* full screen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -210,3 +213,4 @@ footer {
   background-color: #b95449;
   transform: translateY(-2px);
 }
+
