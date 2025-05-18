@@ -66,14 +66,15 @@ header {
 
 /* Profile Picture */
 .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 160px;   /* increased from 120px */
+  height: 160px;  /* increased from 120px */
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #d26a5c;
   margin: 10px auto;
   display: block;
 }
+
 
 /* Hero Section (Home) */
 .hero {
