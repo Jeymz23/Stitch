@@ -1,96 +1,98 @@
-*{
-    font-size: 18px;
-    padding: 0px;
-    margin: 0px;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.top-menu{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    box-shadow: 1px 1px 5px gray;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff6f0;
+  color: #4e2a24;
+  line-height: 1.6;
 }
 
-.primary, .secondary{
-    display: flex;
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-li{
-    list-style-type: none;
-    padding: 5px;
+/* Header */
+header {
+  background-color: #ffe0cc;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-a{
-    text-decoration: none;
-    color: black;
+header h1 {
+  text-align: center;
+  color: #d26a5c;
 }
 
-a:hover{
-    background-color: blueviolet;
-    color: white;
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
 }
 
-.search-icon{
-    background-image: url("https://img.icons8.com/ios7/600/search.png");
-    width: 30px;
-    height: 30px;
-    background-size: 100% 100%;
-    display: none;
+nav a {
+  color: #d26a5c;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
 }
 
-.channel{
-    background-image: url("https://placehold.co/250x35");
-    width: 250px;
-    height: 35px;
-    background-size: 100% 100%;
+nav a:hover {
+  background-color: #ffd1b3;
 }
 
-.sidebar{
-    background-color: darkgray;
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #ffe6d4, #ffd9c0);
+  padding: 60px 0;
+  text-align: center;
 }
 
-.main{
-    display: flex;
+.hero h2 {
+  font-size: 2.5rem;
+  color: #d26a5c;
 }
 
-.carousel{
-    background-color: gray;
-    width: 100%;
-    height: 500px;
-    background-size: 100% 100%;
+.hero p {
+  margin-top: 10px;
+  font-size: 1.1rem;
 }
 
-.stream{
-    background-image: url("https://placehold.co/350x200");
-    width: 350px;
-    height: 200px;
-    background-size: 100% 100%;
-    margin: 5px;
+/* Cards Section */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px 0;
 }
 
-.live{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.card {
+  background-color: #fff0e6;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media screen and (max-width: 1000px) {
-    .sidebar{
-        width: 120px;
-    }
-
-    .live-channels{
-        display: none;
-    }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
 }
 
-@media screen and (max-width: 800px){
-    .searchbar{
-        display: none;
-    }
-
-    .search-icon{
-        display: flex;
-    }
+/* Footer */
+footer {
+  background-color: #ffe0cc;
+  padding: 20px 0;
+  text-align: center;
+  color: #8c4c3b;
+  font-size: 0.9rem;
 }
