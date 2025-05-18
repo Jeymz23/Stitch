@@ -66,8 +66,8 @@ header {
 
 /* Profile Picture */
 .profile-pic {
-  width: 160px;   /* increased from 120px */
-  height: 160px;  /* increased from 120px */
+  width: 160px; 
+  height: 160px;  
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #d26a5c;
