@@ -14,6 +14,7 @@ body {
   background-color: #fff6f0;
   color: #4e2a24;
   line-height: 1.6;
+  padding-top: 110px; /* Ensures content doesn't go under the fixed header */
 }
 
 /* Container */
@@ -25,10 +26,15 @@ body {
 
 /* Header */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #ffe0cc;
   padding: 20px 0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   text-align: center;
+  z-index: 1000;
 }
 
 /* Profile Picture */
