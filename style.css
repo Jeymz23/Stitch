@@ -14,7 +14,7 @@ body {
   background-color: #fff6f0;
   color: #4e2a24;
   line-height: 1.6;
-  padding-top: 110px; /* Ensures content doesn't go under the fixed header */
+  padding-top: 160px; /* Prevent header overlap */
 }
 
 /* Container */
@@ -24,17 +24,19 @@ body {
   margin: auto;
 }
 
-/* Header */
+/* Fixed Header */
 header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #ffe0cc;
+  background-color: rgba(255, 224, 204, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 20px 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
-  z-index: 1000;
+  z-index: 9999;
 }
 
 /* Profile Picture */
@@ -80,11 +82,6 @@ nav a:hover {
 .hero h2 {
   font-size: 2.5rem;
   color: #d26a5c;
-}
-
-.hero p {
-  margin-top: 10px;
-  font-size: 1.1rem;
 }
 
 /* Cards Section */
@@ -138,8 +135,6 @@ footer {
     opacity: 0;
   }
 }
-
-/* === Contact Section Enhancements === */
 
 /* Social Icons */
 .social-icons {
